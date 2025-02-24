@@ -12,18 +12,18 @@ export function Header() {
         <Separator orientation="vertical" className="h-6" />
 
         <nav className="flex items-center space-x-4 lg:space-x-6">
-          <NavLink to="/dashboard">
+          <NavLink to="/athlete-control/dashboard">
             <Home className="h-4 w-4" />
-            Inicio
+            Início
           </NavLink>
 
-          <NavLink to="/athletes">
-            <CirclePlus className="w-4ƒ h-4" />
-            Atleta
+          <NavLink to="/athlete-control/athletes">
+            <CirclePlus className="h-4 w-4" />
+            Atletas
           </NavLink>
 
-          <NavLink to="/schools">
-            <CirclePlus className="w-4ƒ h-4" />
+          <NavLink to="/athlete-control/schools">
+            <CirclePlus className="h-4 w-4" />
             Escolinhas
           </NavLink>
         </nav>

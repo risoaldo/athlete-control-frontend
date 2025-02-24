@@ -8,18 +8,19 @@ import { Schools } from "./pages/app/schols/schools";
 
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/athlete-control",
     element: <AppLayout />,
     children: [
-      { path: "/dashboard", element: <Dashboard /> },
-      { path: "/athletes", element: <Athletes /> },
-      { path: "/schools", element: <Schools /> },
+      { path: "dashboard", element: <Dashboard /> }, 
+      { path: "athletes", element: <Athletes /> },   
+      { path: "schools", element: <Schools /> },     
     ],
   },
-
   {
-    path: "/",
+    path: "/athlete-control",
     element: <SigInLayout />,
-    children: [{ path: "/sign-in", element: <SignIn /> }],
+    children: [
+      { path: "sign-in", element: <SignIn /> }, 
+    ],
   },
 ]);

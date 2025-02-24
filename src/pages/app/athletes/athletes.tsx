@@ -26,7 +26,7 @@ export function Athletes() {
     queryFn: () => getAthletes({ pageIndex }),
   });
 
-  console.log(athletes)
+  console.log(athletes);
   return (
     <>
       <div className="flex flex-col gap-4">
@@ -52,11 +52,15 @@ export function Athletes() {
               {athletes &&
                 athletes.content.map((athlete) => {
                   return <AthleteTableRow key={athlete.id} athlete={athlete} />;
-                })} 
+                })}
             </TableBody>
           </Table>
         </div>
-        <Pagination pageIndex={0} perPage={8} totalCount={200} />
+        <Pagination
+          pageIndex={0}
+          perPage={ 8}
+          totalCount={athletes?.totalElements ? athletes?.totalElements : 0}
+        />
       </div>
     </>
   );

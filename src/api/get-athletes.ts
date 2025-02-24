@@ -25,7 +25,11 @@ export interface athleteProps {
   createdAt?: string;
 }
 
-type athleteResponse = { content: athleteProps[] };
+type athleteResponse = {
+  content: athleteProps[];
+  totalElements: number;
+  size: number;
+};
 
 export async function getAthletes({ pageIndex }: GetAthletesQuery) {
   const result = await api.get<athleteResponse>("/athlete", {
